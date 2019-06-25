@@ -3,6 +3,7 @@ import { NavController,AlertController } from 'ionic-angular';
 import { SignupPage } from '../signup/signup';
 import { UserPage } from '../user/user';
 import { NgoPage } from '../ngo/ngo';
+import { AdminPage } from '../admin/admin';
 import firebase from 'firebase';
 import 'firebase/firestore';
 @Component({
@@ -23,6 +24,18 @@ export class HomePage {
   }
   signin()
   {
+    if(this.data.cat=="admin")
+    {
+      if(this.data.username=="admin" && this.data.password=="admin")
+      {
+        this.navCtrl.push(AdminPage);
+      }
+      else
+      {
+        this.alert("Wrong username or password")
+      }
+    }
+    else{
     let db=firebase.firestore();
     this.values=db.collection(this.data.cat).doc(this.data.username);
     this.values.get().then(doc=>{
@@ -54,6 +67,7 @@ export class HomePage {
     });
     
   }
+}
   alert(message:string) {
     this.alertCtrl.create({
      title: 'info',

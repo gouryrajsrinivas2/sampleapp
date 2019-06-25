@@ -12,6 +12,7 @@ import { HomePage } from '../pages/home/home';
 import { SignupPage } from '../pages/signup/signup';
 import { UserPage } from '../pages/user/user';
 import { NgoPage } from '../pages/ngo/ngo';
+import { AdminPage } from '../pages/admin/admin';
 
 const firebaseConfig = {
   apiKey: "AIzaSyA0mgmOhPyYESy9XgXWJcyY5MYBpTN-ebk",
@@ -30,7 +31,8 @@ firebase.initializeApp(firebaseConfig);
     HomePage,
     SignupPage,
     UserPage,
-    NgoPage
+    NgoPage,
+    AdminPage
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,8 @@ firebase.initializeApp(firebaseConfig);
     HomePage,
     SignupPage,
     UserPage,
-    NgoPage
+    NgoPage,
+    AdminPage
   ],
   providers: [
     StatusBar,

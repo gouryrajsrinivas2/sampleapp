@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { SignupPage } from '../pages/signup/signup';
 import { UserPage } from '../pages/user/user';
 import { NgoPage } from '../pages/ngo/ngo';
+import { AdminPage } from '../pages/admin/admin';
 @Component({
   templateUrl: 'app.html'
 })
