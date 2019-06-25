@@ -1,0 +1,83 @@
+
+
+<ion-content class="background">
+  <ion-card>
+    <ion-card-header>
+      SIGN UP FOR FREE!
+    </ion-card-header>
+    <ion-card-content>
+      <form (ngSubmit)="signup()">
+        <div padding>
+        <ion-segment [(ngModel)]="type" color="green" name="type">
+          <ion-segment-button value="user" >
+            User
+          </ion-segment-button>
+          <ion-segment-button value="ngo" >
+            Blood Bank
+          </ion-segment-button>
+        </ion-segment>
+        </div>
+        <div [ngSwitch]="type">
+          <ion-list *ngSwitchCase="'user'" >
+
+            <ion-item>
+               <ion-label floating>Name</ion-label>
+               <ion-input type="text" [(ngModel)]="data.name" name="name"></ion-input>
+             </ion-item>
+             <ion-item>
+               <ion-label floating>Username</ion-label>
+               <ion-input type="text" [(ngModel)]="data.username" name="username"></ion-input>
+             </ion-item>
+            <ion-item>
+              <ion-label floating>Phone Number</ion-label>
+              <ion-input type="number" [(ngModel)]="data.phonenum" name="phonenum"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label floating>Mail I'd</ion-label>
+              <ion-input type="email" [(ngModel)]="data.email" name="email"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label floating>Password</ion-label>
+              <ion-input type="password" [(ngModel)]="data.password"  name="password"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label floating> Confirm Password</ion-label>
+              <ion-input type="password" [(ngModel)]="data.cpassword"  name="cpassword"></ion-input>
+            </ion-item>
+          </ion-list>
+
+          <ion-list *ngSwitchCase="'ngo'">
+            <ion-item>
+              <ion-label floating>Name</ion-label>
+              <ion-input type="text" [(ngModel)]="data.name" name="name"></ion-input>
+            </ion-item>
+            <ion-item>
+               <ion-label floating>Username</ion-label>
+               <ion-input type="text" [(ngModel)]="data.username" name="username"></ion-input>
+             </ion-item>
+            <ion-item>
+              <ion-label floating>Phone Number</ion-label>
+              <ion-input type="number" [(ngModel)]="data.phonenum" name="phonenum"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label floating>Mail I'd</ion-label>
+              <ion-input type="email" [(ngModel)]="data.email" name="email"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label floating>Password</ion-label>
+              <ion-input type="password" [(ngModel)]="data.password"  name="password"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label floating> Confirm Password</ion-label>
+              <ion-input type="password" [(ngModel)]="data.cpassword"  name="cpassword"></ion-input>
+            </ion-item>
+          </ion-list>
+        </div>
+        <br>
+        <button ion-button color="danger" ion-left block>
+        <div> Register Now </div>
+        </button> 
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
