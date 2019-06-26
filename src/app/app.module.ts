@@ -14,6 +14,11 @@ import { UserPage } from '../pages/user/user';
 import { NgoPage } from '../pages/ngo/ngo';
 import { AdminPage } from '../pages/admin/admin';
 
+import { AndroidFingerprintAuth } from '@ionic-native/android-fingerprint-auth';
+import { Geolocation } from '@ionic-native/geolocation';
+import { NativeGeocoder, NativeGeocoderResult, NativeGeocoderOptions } from '@ionic-native/native-geocoder/ngx';
+
+
 const firebaseConfig = {
   apiKey: "AIzaSyA0mgmOhPyYESy9XgXWJcyY5MYBpTN-ebk",
   authDomain: "sampleapp-d8ef5.firebaseapp.com",
@@ -52,6 +57,11 @@ firebase.initializeApp(firebaseConfig);
   providers: [
     StatusBar,
     SplashScreen,
+    AndroidFingerprintAuth,
+    Geolocation,
+    NativeGeocoder,
+   // NativeGeocoderResult,
+   // NativeGeocoderOptions, 
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
