@@ -16,6 +16,8 @@ import 'firebase/firestore';
 })
 export class AdminPage {
   data=[] as any;
+  data2=[] as any;
+  type;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
     let db=firebase.firestore();
@@ -29,6 +31,13 @@ export class AdminPage {
     db.collection("admin").doc("user").collection("user").get().then(querySnapshot=>{
       querySnapshot.forEach(doc=>{
         this.data.push(doc.data());
+        console.log(this.data);
+      })
+    })
+
+    db.collection("admin").doc("ngo").collection("ngo").get().then(querySnapshot=>{
+      querySnapshot.forEach(doc=>{
+        this.data2.push(doc.data());
         console.log(doc.data());
       })
     })

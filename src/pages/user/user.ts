@@ -30,7 +30,7 @@ export class UserPage {
     let db=firebase.firestore();
     db.collection("admin").doc("user").collection("user").doc(this.data.username).set({
           
-          type:this.data.type,liters:this.data.liters,city:this.data.city
+          type:this.data.type,liters:this.data.liters,city:this.data.city,username:this.data.username
     })
     .then(dat=>{
       this.alert("you have sucessfully requested");
