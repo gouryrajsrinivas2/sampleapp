@@ -18,74 +18,78 @@
         </div>
         <div [ngSwitch]="type">
           <div *ngSwitchCase="'user'" >
+            <ion-grid>
              <ion-row>
-             <ion-col>
+             <ion-col col-5>
              <p><b>Username</b></p>
              </ion-col>
-             <ion-col>
+             <ion-col col-2>
              <p><b>City</b></p>
              </ion-col>
-             <ion-col>
+             <ion-col col-3>
              <p><b>Liters</b></p>
              </ion-col>
-             <ion-col>
-             <p><b>Type</b></p>
+             <ion-col col-2>
+             <p><b>type</b></p>
              </ion-col>
              </ion-row>
              <div *ngFor=" let item of data">
              <ion-row>
-             <ion-col>
+             <ion-col col-5>
              <p>{{item.username}}</p>
              </ion-col>
-             <ion-col>
+             <ion-col col-2>
              <p>{{item.city}}</p>
              </ion-col>
-             <ion-col>
+             <ion-col col-3>
              <p>{{item.liters}}</p>
              </ion-col>
-             <ion-col>
+             <ion-col col-2>
              <p>{{item.type}}</p>
              </ion-col>
              </ion-row>
              </div>
+            </ion-grid>
           </div>
           <div *ngSwitchCase="'ngo'" >
+            <ion-grid>
              <ion-row>
-             <ion-col>
-             <p><b>Username</b></p>
+             <ion-col col-4>
+             <p><b>username</b></p>
              </ion-col>
-             <ion-col>
+             <ion-col col-2>
              <p><b>A+</b></p>
              </ion-col>
-             <ion-col>
+             <ion-col col-2>
              <p><b>B+</b></p>
              </ion-col>
-             <ion-col>
+             <ion-col col-2>
              <p><b>O+</b></p>
              </ion-col>
-             <ion-col>
+             <ion-col col-2>
              <p><b>City</b></p>
              </ion-col>
              </ion-row>
              <div *ngFor=" let ite of data2">
              <ion-row>
-             <ion-col>
+             <ion-col col-4>
              <p>{{ite.username}}</p>
              </ion-col>
-             <ion-col>
+             <ion-col col-2>
              <p>{{ite.a}}</p>
              </ion-col>
-             <ion-col>
+             <ion-col col-2>
              <p>{{ite.b}}</p>
              </ion-col>
-             <ion-col>
+             <ion-col col-2>
              <p>{{ite.o}}</p>
              </ion-col>
-             <ion-col>
+             <ion-col col-2>
              <p>{{ite.city}}</p>
              </ion-col>
              </ion-row>
              </div>
+            </ion-grid>
           </div>
         </div>
       </ion-card-content>
